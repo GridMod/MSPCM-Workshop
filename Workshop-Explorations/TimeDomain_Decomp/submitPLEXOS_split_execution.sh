@@ -50,7 +50,8 @@ for I in $(seq 001 $p); do
  cp "${runscript}" "${name}/${model}_${p}P_OLd${o}_$i/."
  cp "${name}.xml" "${name}/${model}_${p}P_OLd${o}_$i/."
  #create links to datafiles (not actually copied)
- ln -s "${rootdir}/Data Files/" "${name}/${model}_${p}P_OLd${o}_$i/."
+ #ln -s "${rootdir}/Data Files/" "${name}/${model}_${p}P_OLd${o}_$i/."
+ ln -s "${rootdir}/timeseries_data_files/" "${name}/${model}_${p}P_OLd${o}_$i/."
  #go to directory
  cd "${name}/${model}_${p}P_OLd${o}_$i/"
  pwd
@@ -58,7 +59,7 @@ for I in $(seq 001 $p); do
  PBS_O_WORKDIR=$(pwd)
  echo "qsub -A ${alloc} -q ${queue}  -l ${feature} -v filename="${name}",model="${model}_${p}P_OLd${o}_$i" ${runscript}"
  #submit job to HPC scheduler
- qsub -A ${alloc} -q ${queue}  -l ${feature} -v filename="${name}",model="${model}_${p}P_OLd${o}_$i" ${runscript}
+ #qsub -A ${alloc} -q ${queue}  -l ${feature} -v filename="${name}",model="${model}_${p}P_OLd${o}_$i" ${runscript}
  #go back to root directory and start over
  cd $rootdir
 done
