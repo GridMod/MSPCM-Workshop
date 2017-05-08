@@ -7,7 +7,7 @@
 
 2. Create a symbolic link to the timeseries datafiles
  ```
- ln -s ../../RTs-G ls -s ../../RTs-GMLC-Dataset/timeseries_data_files timeseries_data_files
+ ln -s ../../RTS-GMLC-Dataset/timeseries_data_files timeseries_data_files
  ```
 
 3. Get yourself an interactive node
