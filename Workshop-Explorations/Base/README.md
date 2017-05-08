@@ -10,7 +10,12 @@
  ln -s ../../RTs-G ls -s ../../RTs-GMLC-Dataset/timeseries_data_files timeseries_data_files
  ```
 
-3. 
+3. Get yourself an interactive node
+ ```
+ qsub -I -A PLEXOSMODEL -q debug
+ ```
+ 
+4. Setup your environment
  ```
  module purge
  module use /nopt/nrel/apps/modules/candidate/modulefiles
@@ -18,13 +23,8 @@
  module load epel gcc mono/4.6.2.7 xpressmp/8.0.4 plexos/7.400.2
  ```
 
-4. 
+5.  Add the PLEXOS temp file
  ```
-#MAX_TEMP_FILE_AGE is an environmental variable that Plexos uses to determine how 
-#old a temporary directory can be (in days) before it should be purged
-#see http://wiki.energyexemplar.com/index.php?n=Article.AdvancedSettings
-export MAX_TEMP_FILE_AGE=50
-
 #PLEXOS_TEMP isan environmental variable that Plexos uses to store temporary files.
 #Plexos creates subdirectories in this directory for each run.
 #If the subdirectory gets deleted during the run then the run will fail when it tries to write the solution file.
@@ -34,7 +34,7 @@ export TEMP=$PLEXOS_TEMP
 mkdir -p $PLEXOS_TEMP $TEMP
 ```
 
-5.
+6. run PLEXOS
 ```
 mono $PLEXOS/PLEXOS64.exe -n "RTS-GMLC.xml" -m DAY_AHEAD
 ```
