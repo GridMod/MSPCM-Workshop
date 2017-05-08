@@ -38,7 +38,7 @@ echo "splitmodel.py -n $name.xml -m $model -p $p -o $o"
 #setsolverdefaults.py -n OLd$i/RMPP_Core_DB_Storage_6208.xml -m $1 -s CPLEX
 #execute splitmodel script from the phelper module
 #run splitmodel.py -h to get help on this function
-#splitmodel.py -n $name.xml -m $model -p $p -o $o
+splitmodel.py -n $name.xml -m $model -p $p -o $o
 
 #for every partition, do:
 for I in $(seq 001 $p); do
