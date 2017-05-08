@@ -8,7 +8,7 @@
 ############################ USER MODIFIED SECTION ########################
 export p=004 #partitions
 export o=002 #overlap days
-export feature="nodes=1,walltime=15:00"
+export feature="nodes=1,walltime=25:00"
 export alloc="PLEXOSMODEL"
 export queue="batch"
 export runscript="runPLEXOS_7420.sh"
@@ -61,7 +61,6 @@ for I in $(seq 001 $p); do
  #submit job to HPC scheduler
  echo $submitcommand
  $submitcommand
- #qsub -A ${alloc} -q ${queue}  -l ${feature} -v filename="${name}",model="${model}_${p}P_OLd${o}_$i" ${runscript}
  #go back to root directory and start over
  cd $rootdir
 done
