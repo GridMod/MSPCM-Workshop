@@ -4,7 +4,7 @@
 # ./submitPLEXOS_list.sh WECC.xml models.txt
 
 ############################ USER MODIFIED SECTION ########################
-export feature="nodes=1,walltime=24:00:00"
+export feature="nodes=1,walltime=5:00:00"
 export alloc="PLEXOSMODEL"    #allcoation to use
 export queue="batch"          #hpc queue
 export runscript="runPLEXOS_7420.sh"
