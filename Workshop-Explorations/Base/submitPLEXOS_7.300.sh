@@ -19,12 +19,17 @@ mkdir -p ${models}
 rootdir=$(pwd)
 cd $rootdir
 
-cp runPLEXOS_7420.sh "${models}/."
-cp rplexos_parser.R "${models}/."
+cp "${runscript}" "${models}/."
+cp run_html_output_rts_DA.R "${models}/."
+cp gen_name_mapping_WECC_RTS.csv "${models}/."
+cp input_data.csv "${models}/."
 cp "${name}.xml" "${models}/."
  #ln -s "${rootdir}/Data Files/" "${name}/$line/."
 ln -s "${rootdir}/timeseries_data_files/" "${models}"
 cd "${models}/"
+
+sed -i "s/\<solution_folder\>/Model\ "${models}"\ Solution/g" gen_name_mapping_WECC_RTS.csv
+
 pwd
 PBS_O_WORKDIR=$(pwd)
 submitcommand="qsub -q ${queue} -A ${alloc}  -l ${feature} -v filename="${name}",model="${models}" ${runscript}"
