@@ -28,10 +28,10 @@ echo $plexos_command
 $plexos_command
 
 ## Run RT Model
-#ln -s "../DA_${model}/Model DA_${model} Solution/." "Model DA_${model} Solution"
-#plexos_command="mono $PLEXOS/PLEXOS64.exe -n $filename -m "RT_${model}""
-#echo $plexos_command
-#$plexos_command
+ln -s "../${model}/Model ${model} Solution/." "Model ${model} Solution"
+plexos_command="mono $PLEXOS/PLEXOS64.exe -n "${filename}.xml" -m "${model}_RT""
+echo $plexos_command
+$plexos_command
 
 ## Create Rplexos db
 solution_zip=$(ls $PBS_O_WORKDIR/$filename/$model/*Solution/*zip)
