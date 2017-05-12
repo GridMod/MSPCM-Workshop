@@ -10,7 +10,7 @@ fig.path.name    = file.path(db.loc,'plots')
 output.name      = 'HTML_output_DA.html'
 db.day.ahead.loc = NULL
 query.data       = TRUE
-save.data        = FALSE
+save.data        = TRUE
 load.data        = '<Name of file to load if query.data=FALSE >'
 save.data.name   = 'magma_data.Rda'
 reassign.zones   = FALSE
