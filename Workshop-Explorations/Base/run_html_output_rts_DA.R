@@ -4,7 +4,7 @@
 #------------------------------------------------------------------------------|
 magma.dir        = normalizePath('~/MAGMA')
 input.csv        = normalizePath('input_data_rts.csv')
-db.loc           = c(normalizePath('<solution_folder>'))
+db.loc           = c(normalizePath('solution_folder'))
 output.dir       = db.loc
 fig.path.name    = file.path(db.loc,'plots')
 output.name      = 'HTML_output_DA.html'

@@ -25,19 +25,19 @@ mkdir -p $PLEXOS_TEMP $TEMP
 ## Run DA Model
 plexos_command="mono $PLEXOS/PLEXOS64.exe -n "${filename}.xml" -m "${model}""
 echo $plexos_command
-#$plexos_command
+$plexos_command
 
 ## Run RT Model
 #ln -s "../DA_${model}/Model DA_${model} Solution/." "Model DA_${model} Solution"
 #plexos_command="mono $PLEXOS/PLEXOS64.exe -n $filename -m "RT_${model}""
 #echo $plexos_command
-$plexos_command
+#$plexos_command
 
 ## Create Rplexos db
 solution_zip=$(ls $PBS_O_WORKDIR/$filename/$model/*Solution/*zip)
 echo Solution = $solution_zip
 #Rscript rplexos_parser.R
-Rscript run_html_output.R
+Rscript run_html_output_rts_DA.R  
 
 ## Move Rplexos parsed database into the parent directory
 mv "Model ${model} Solution-rplexos.db" $PBS_O_WORKDIR/..
