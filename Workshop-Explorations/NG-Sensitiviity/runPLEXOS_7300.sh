@@ -22,6 +22,10 @@ export TEMP=$PLEXOS_TEMP
 #make sure the PLEXOS_TEMP and TEMP directories exist
 mkdir -p $PLEXOS_TEMP $TEMP
 
+export wait=$((1 + RANDOM % 30))
+echo "Waiting ${wait} to start"
+sleep $wait
+
 ## Run DA Model
 plexos_command="mono $PLEXOS/PLEXOS64.exe -n "${filename}.xml" -m "${model}""
 echo $plexos_command
