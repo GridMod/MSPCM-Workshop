@@ -8,7 +8,7 @@ db.loc           = c(normalizePath('solution_rt_folder'))
 output.dir       = db.loc
 fig.path.name    = file.path(db.loc,'plots')
 output.name      = 'RTS_baseline_DA_RT.html'
-db.day.ahead.loc = c( 'Model submitPLEXOS_list_7.300.sh Solution' )
+db.day.ahead.loc = c( 'solution_folder' )
 query.data       = TRUE
 save.data        = TRUE
 load.data        = '<Name of file to load if query.data=FALSE >'
