@@ -7,7 +7,7 @@
 export feature="nodes=1,walltime=8:00:00"
 export alloc="PLEXOSMODEL"    #allcoation to use
 export queue="batch-h"          #hpc queue
-export runscript="runPLEXOS_73030303030303030303030303030303030303030303030303030303030300.sh"
+export runscript="runPLEXOS_7300.sh"
 ##########################################################################
 
 name="${1%.*}"

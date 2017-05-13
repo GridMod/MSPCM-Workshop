@@ -37,8 +37,7 @@ $plexos_command
 solution_zip=$(ls $PBS_O_WORKDIR/$filename/$model/*Solution/*zip)
 echo Solution = $solution_zip
 #Rscript rplexos_parser.R
-ssh login-1 run_magma_ssh.sh
-
+ssh login1 "cd $PWD; ./run_magma_ssh.sh"
 
 ## Move Rplexos parsed database into the parent directory
 mv "Model ${model} Solution-rplexos.db" $PBS_O_WORKDIR/..
