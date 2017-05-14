@@ -11,7 +11,7 @@ export o=002 #overlap days
 export feature="nodes=1,walltime=25:00"
 export alloc="PLEXOSMODEL"
 export queue="batch"
-export runscript="runPLEXOS_7420.sh"
+export runscript="runPLEXOS_7300.sh"
 ##########################################################################
 
 #database name from first input parameter
