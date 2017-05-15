@@ -1,8 +1,12 @@
 # Draft agenda for MSPCM-Workshop
 
+ - 8:00-8:30 Arrive
  - 8:30-10:30 TRC
- - 10:30-11:00 RTS-GMLC Dataset overview
- - 11:00-2:00 (with lunch break) PCM on Peregrine Examples
+ - 10:30-10:45 Break
+ - 10:45-11:15 RTS-GMLC Dataset overview
+ - 11:15-11-45 Russ Philbrick from PSO
+ - 11:45-12:45 Lunch with Peregrine connection troubleshooting
+ - 12:45-2:00 Parallel PCM examples
    - Single DA-RT simulation
      - PLEXOS
      - PSO

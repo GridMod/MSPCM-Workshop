@@ -38,3 +38,5 @@ mkdir -p $PLEXOS_TEMP $TEMP
 ```
 mono $PLEXOS/PLEXOS64.exe -n "RTS-GMLC.xml" -m DAY_AHEAD
 ```
+
+8. [Example MAGMA](https://gridmod.github.io/MSPCM-Workshop/HTML_output_DA.html) output is viewable on github.
