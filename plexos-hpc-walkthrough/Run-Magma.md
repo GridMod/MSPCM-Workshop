@@ -1,6 +1,8 @@
 
 ##Run Magma
 
+use a login node
+
 ```bash
 cd ~
 git clone https://github.com/NREL/MAGMA.git
