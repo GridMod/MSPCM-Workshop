@@ -14,7 +14,7 @@
 
 3. Get yourself an interactive node
  ```
- qsub -I -A PLEXOSMODEL -l advres=wshoppre3.57711 
+ qsub -I -A PLEXOSMODEL -l advres=workshop.57684 
  # without a reservation this looks like qsub -I -A PLEXOSMODEL -q debug
  ```
  
