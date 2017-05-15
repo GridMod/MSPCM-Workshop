@@ -31,7 +31,7 @@ xvfb-run -a Rscript run_html_output_rts_DA.R
 * change `$USER` _(2 spots)_ to your HPC username in the below command
 
 ```bash
-scp "$USER@peregrine.hpc.nrel.gov:/scratch/$USER/MSPCM-Workshop/Workshop-Explorations/OneWeek/scratch/cbarrows/MSPCM-Workshop/Workshop-Explorations/OneWeek/Model\ DAY_AHEAD\ Solution/HTML_output_DA.html" .
+scp "$USER@peregrine.hpc.nrel.gov:/scratch/$USER/MSPCM-Workshop/Workshop-Explorations/OneWeek/Model\ DAY_AHEAD\ Solution/HTML_output_DA.html" .
 
 start HTML_output_DA.html
 ```
