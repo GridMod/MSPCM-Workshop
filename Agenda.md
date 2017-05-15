@@ -2,23 +2,17 @@
 
  - 8:00-8:30 Arrive
  - 8:30-10:30 TRC
-  - Stochastics
-  - MIP Warm Start
-  - Temporal Decomposition
-  - Geographic Decompositon
+   - Stochastics
+   - MIP Warm Start
+   - Temporal Decomposition
+   - Geographic Decompositon
  - 10:30-10:45 Break
  - 10:45-11:15 RTS-GMLC Dataset overview
  - 11:15-11-45 Russ Philbrick from PSO
  - 11:45-12:45 Lunch with Peregrine connection troubleshooting
  - 12:45-2:00 Parallel PCM examples
-   - Single DA-RT simulation
-     - PLEXOS
-     - PSO
-   - Multiple scenarios in parallel
-     - NG Sensitvity
-     - Modeling configuration sensitivity
-     - SS sensitivity
-   - Time domain decomposition
+   - PLEXOS
+   - PSO
  - 2:00-4:00 Analysis
    - MAGMA
    - MAGMA comparison
