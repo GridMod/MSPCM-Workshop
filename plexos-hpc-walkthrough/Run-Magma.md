@@ -2,7 +2,7 @@
 ##Run Magma
 
 ```bash
-cd /scratch/wjones/
+cd ~
 git clone https://github.com/NREL/MAGMA.git
 cd MAGMA/Examples/RTS-2016
 module use /nopt/nrel/apps/modules/candidate/modulefiles
