@@ -1,4 +1,4 @@
-#Install git and bash on your laptop
+# Install git and bash on your laptop
 
 In order to best enable access and use of the HPC System, you should have a terminal on your laptop that runs bash and has git available.
 
