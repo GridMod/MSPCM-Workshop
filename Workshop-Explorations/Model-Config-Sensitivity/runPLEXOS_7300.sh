@@ -25,13 +25,13 @@ mkdir -p $PLEXOS_TEMP $TEMP
 ## Run DA Model
 plexos_command="mono $PLEXOS/PLEXOS64.exe -n "${filename}.xml" -m "${model}""
 echo $plexos_command
-$plexos_command
+#$plexos_command
 
 ## Run RT Model
 ln -s "../${model}/Model ${model} Solution/." "Model ${model} Solution"
 plexos_command="mono $PLEXOS/PLEXOS64.exe -n "${filename}.xml" -m "${model}_RT""
 echo $plexos_command
-$plexos_command
+#$plexos_command
 sed -i "s/solution_rt_folder/Model\ "${model}_RT"\ Solution/g" run_html_output_rts_DA_RT.R  
 
 ## Create Rplexos db
