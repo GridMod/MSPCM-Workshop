@@ -8,7 +8,7 @@ clone github.com/gridmod/<workshop> use http
 cd /scratch/$USER
 git clone https://github.com/GridMod/MSPCM-Workshop.git
 cd MSPCM-Workshop 
-git clone git@github.nrel.gov:aces/plexos-hpc-walkthrough.git
+
 ```
 
 Make a temporary directory for Plexos:
