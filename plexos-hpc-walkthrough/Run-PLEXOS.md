@@ -2,7 +2,7 @@
 
 1. Move into the model directory
  ```
- cd /scratch/$USER/MSPCM-Workshop/Workshop-Explorations/Base/
+ cd /scratch/$USER/MSPCM-Workshop/Workshop-Explorations/TimeDomain_Decomp
  ```
 
 2. Create a symbolic link to the timeseries datafiles, environment and python script
