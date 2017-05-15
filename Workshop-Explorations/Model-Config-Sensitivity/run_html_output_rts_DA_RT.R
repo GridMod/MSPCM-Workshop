@@ -2,7 +2,7 @@
 #------------------------------------------------------------------------------|
 # USER INPUT: set input parameters ----
 #------------------------------------------------------------------------------|
-ogma.dir        = normalizePath('~/MAGMA')
+magma.dir        = normalizePath('~/MAGMA')
 input.csv        = normalizePath('input_data_rts.csv')
 db.loc           = c(normalizePath('solution_rt_folder'))
 output.dir       = db.loc
