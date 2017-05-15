@@ -34,7 +34,7 @@ ramp_plot <- function(df,facet_scen=TRUE,facet_cols=3) {
 
 ramp_boxplot <- function(df){
   p <- ggplot(df,aes(Type,ramp,color=scenario)) + geom_boxplot() +
-    scale_color_brewer(palette='Set1') +
+    scale_color_brewer(palette='Set1',name='') +
     xlab("") + ylab("Ramp") +
     theme( legend.key =       element_rect(color = "grey80", size = 0.4),
            legend.key.size =  grid::unit(0.9, "lines"),
@@ -68,6 +68,7 @@ ramp.hour.gen <- interval.ramp.data[, .(ramp=max(diff(generation))/max(capacity)
                                     by=.(scenario,name,Type,day)]
 ramp.hour <- ramp.hour.gen[, .(ramp=sum(ramp*capacity)/sum(capacity)), by=.(scenario,Type,day)]
 ramp_plot(ramp.hour) + ylab('Ramp, Daily average Fraction\nof Capacity per hour')
+ramp_boxplot(ramp.hour) + ylab('Ramp, Fraction of Capacicty')
 
 
 # Calculate ramping as the coefficient of variance
@@ -76,5 +77,6 @@ ramp.var.gen <- interval.ramp.data[, .(ramp=sd(generation)/mean(generation)*100,
 ramp.var.gen[is.na(ramp), ramp:=0]
 ramp.var <- ramp.var.gen[, .(ramp=sum(ramp*capacity)/sum(capacity)), by=.(scenario,Type,day)]
 ramp_plot(ramp.var,FALSE,5)
+ramp_boxplot(ramp.var) 
 
 
