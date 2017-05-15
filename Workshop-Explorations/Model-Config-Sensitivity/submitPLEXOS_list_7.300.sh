@@ -22,6 +22,7 @@ cd $rootdir
 while read line; do
  mkdir -p ${name}/${line}
  cp "${runscript}" "${name}/${line}/."
+ cp run_html_output_rts_DA.R "${name}/${line}/."
  cp run_html_output_rts_DA_RT.R "${name}/${line}/."
  cp gen_name_mapping_WECC_RTS.csv "${name}/${line}/."
  cp input_data_rts.csv "${name}/${line}/."
@@ -30,6 +31,7 @@ while read line; do
  #ln -s "${rootdir}/Data Files/" "${name}/$line/."
  ln -s "${rootdir}/timeseries_data_files/" "${name}/$line/."
  cd "${name}/${line}/"
+ sed -i "s/solution_folder/Model\ "${line}"\ Solution/g" run_html_output_rts_DA.R  
  sed -i "s/solution_folder/Model\ "${line}"\ Solution/g" run_html_output_rts_DA_RT.R  
  pwd
  PBS_O_WORKDIR=$(pwd)
