@@ -1,19 +1,19 @@
 # plexos-hpc-walkthrough
 Introduction for new users to run Plexos on the HPC
 
-##[Obtain an account for NREL HPC](Obtain-Account.md)
+[Obtain an account for NREL HPC](Obtain-Account.md)
 
-##[Install git and bash on your laptop](INSTALL-GIT-BASH.md)
+[Install git and bash on your laptop](INSTALL-GIT-BASH.md)
 
-##[Login into NREL HPC, peregrine](Login-HPC.md)
+[Login into NREL HPC, peregrine](Login-HPC.md)
 
-##[View software and initiate a session on a compute node](Initial-Session.md)
+[View software and initiate a session on a compute node](Initial-Session.md)
 
-##[First Time Setup of PLEXOS on HPC](Setup-PLEXOS.md)
+[First Time Setup of PLEXOS on HPC](Setup-PLEXOS.md)
 
-##[Run a week of the Base Case](Run-PLEXOS.md)
+[Run a week of the Base Case](Run-PLEXOS.md)
 
-##[Run Magma on that week](Run-Magma.md)
+[Run Magma on that week](Run-Magma.md)
 
 run coad to extract a week
 Run RTC-GMLC
@@ -25,12 +25,6 @@ Include how to install coad into a conda environment in the help of the module.
 Assume Submit a job
 Assume Monitor a job
 Require git-bash for windows
-
-cd /scratch/$USER
-
-clone github.nrel.gov/aces/plexos-intro
-Cd plexos-intro
-Git clone https://github.com/GridMod/RTS-GMLC
 
 qsub –q debug –I #get a single node from the reservation to run interactively.
 
