@@ -8,7 +8,7 @@
 2. Create a symbolic link to the timeseries datafiles, environment and python script
  ```
  ln -s ../../RTS-GMLC-Dataset/timeseries_data_files timeseries_data_files
- ln -s ../../plexos-hpc-walkthrough/env-7.4.2.sh .
+ ln -s ../../plexos-hpc-walkthrough/env-7.3.3.sh .
  ln -s ../../plexos-hpc-walkthrough/get_week.py .
  ```
 
@@ -20,7 +20,7 @@
  
 4. Setup your environment
  ```
-source env-7.4.2.sh
+source env-7.3.3.sh
 
 # module purge 
 # module use /nopt/nrel/apps/modules/candidate/modulefiles
