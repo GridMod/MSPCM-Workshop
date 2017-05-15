@@ -2,6 +2,10 @@
 
  - 8:00-8:30 Arrive
  - 8:30-10:30 TRC
+  - Stochastics
+  - MIP Warm Start
+  - Temporal Decomposition
+  - Geographic Decompositon
  - 10:30-10:45 Break
  - 10:45-11:15 RTS-GMLC Dataset overview
  - 11:15-11-45 Russ Philbrick from PSO
