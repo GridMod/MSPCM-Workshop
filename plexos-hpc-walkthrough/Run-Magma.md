@@ -33,5 +33,5 @@ xvfb-run -a Rscript run_html_output_rts_DA.R
 ```bash
 scp "$USER@peregrine.hpc.nrel.gov:/scratch/MSPCM-Workshop/Workshop-Explorations/OneWeek/scratch/cbarrows/MSPCM-Workshop/Workshop-Explorations/OneWeek/Model\ DAY_AHEAD\ Solution/HTML_output_DA.html" .
 
-open HTML_output_DA.html
+start HTML_output_DA.html
 ```
