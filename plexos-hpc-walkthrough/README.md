@@ -15,5 +15,7 @@ Introduction for new users to run Plexos on the HPC
 
 7. [Run Magma on that week](Run-Magma.md)
 
+8. [Example TDSVis of week](https://gridmod.github.io/MSPCM-Workshop/PLEXOS_TDSVIS-Workshop.html)
+
 
 
