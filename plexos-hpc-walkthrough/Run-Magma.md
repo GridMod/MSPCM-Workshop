@@ -3,7 +3,7 @@
 
 # use a login node
 
-*if your node command prompt looks like `$USR@n0000`, you need to exit your interactive job
+* if your node command prompt looks like `$USR@n0000`, you need to exit your interactive job
 ```bash
 [cbarrows@n1009 OneWeek]$ exit
 logout
@@ -26,9 +26,9 @@ xvfb-run -a Rscript run_html_output_rts_DA.R
 
 ## Use scp in git-bash to copy the html to your local machine and view
 
-*open a new git-bash prompt (local)
+* open a new git-bash prompt (local)
 
-*change `$USER` to your HPC username in the below command
+* change `$USER` to your HPC username in the below command
 
 ```bash
 scp "$USER@peregrine.hpc.nrel.gov:/scratch/MSPCM-Workshop/Workshop-Explorations/OneWeek/scratch/cbarrows/MSPCM-Workshop/Workshop-Explorations/OneWeek/Model\ DAY_AHEAD\ Solution/HTML_output_DA.html" .
