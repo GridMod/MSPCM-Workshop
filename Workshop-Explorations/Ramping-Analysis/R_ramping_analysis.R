@@ -10,8 +10,10 @@ if(!'Type' %in% names(total.installed.cap)){
   total.installed.cap[, Type:=gen.type.mapping[name]]
 }
 setkey(total.installed.cap,name,Type,scenario)
-interval.ramp.data = merge(interval.generation[,.(scenario, name, Type, generation=value, time)],
-                           total.installed.cap[,.(scenario, name, Type, capacity=value)], by=c('name','Type','scenario'))
+interval.ramp.data = merge(interval.generation[! Type %in% re.types,
+                                               .(scenario, name, Type, generation=value, time)],
+                           total.installed.cap[! Type %in% re.types,
+                                               .(scenario, name, Type, capacity=value)], by=c('name','Type','scenario'))
 interval.ramp.data[, day:=as.POSIXlt(time)[[8]]]
 
 
