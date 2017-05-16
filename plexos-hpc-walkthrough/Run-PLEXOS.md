@@ -22,7 +22,7 @@
 4. Setup your environment
  ```
 source env-7.3.3.sh
-
+cat env-7.3.3.sh
 #module use /nopt/nrel/apps/modules/candidate/modulefiles
 #module purge
 #module load epel gcc mono/4.6.2.7 xpressmp/7.8.0 plexos/7.300.3
@@ -31,6 +31,10 @@ source env-7.3.3.sh
 #export PLEXOS_TEMP=/scratch/$USER/tmp/$PBS_JOBID
 #export TEMP=$PLEXOS_TEMP
 #mkdir -p $PLEXOS_TEMP
+module list
+#Currently Loaded Modulefiles:
+#  1) epel/6.6          3) mono/4.6.2.7      5) plexos/7.300.3    7) coad/2.0          9) pandoc/1.19.2.1
+#  2) gcc/6.2.0         4) xpressmp/7.8.0    6) conda/4.3.1       8) R/3.2.2
  ```
 
 5. Cut out one week to run DAY_AHEAD model on
