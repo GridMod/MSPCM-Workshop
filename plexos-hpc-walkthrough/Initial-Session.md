@@ -18,7 +18,7 @@ On the HPC system we will work out of the scratch filesystem.  You can put files
 
 We will aquire an interactive session on a compute node to do our work and will request it from the batch scheduler using qsub.
 ```
-[wjones@login4 wjones]$ qsub -A PLEXOSMODEL -q debug -I
+[wjones@login4 wjones]$ qsub -I -A PLEXOSMODEL -l advres=workshop.57721,nodes=1,walltime=30:00 -q batch-h 
 qsub: waiting for job 3211739 to start
 qsub: job 3211739 ready
 
@@ -28,7 +28,7 @@ hpc-admin2.hpc.nrel.gov:
                                                                                   Req'd       Req'd       Elap
 Job ID                  Username    Queue    Jobname          SessID  NDS   TSK   Memory      Time    S   Time
 ----------------------- ----------- -------- ---------------- ------ ----- ------ --------- --------- - ---------
-3211739                 wjones      debug    STDIN             60456     1      1       --   01:00:00 R  00:00:09
+3211739                 wjones      debug    STDIN             60456     1      1       --   00:30:00 R  00:00:09
 [wjones@n0289 wjones]$ pwd
 /scratch/wjones
 ```

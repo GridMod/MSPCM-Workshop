@@ -35,3 +35,5 @@ scp "$USER@peregrine.hpc.nrel.gov:/scratch/$USER/MSPCM-Workshop/Workshop-Explora
 
 start HTML_output_DA.html
 ```
+
+[Example Magma output](https://gridmod.github.io/MSPCM-Workshop/HTML_output_DA.html) is posted in github pages.
