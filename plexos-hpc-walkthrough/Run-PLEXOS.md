@@ -14,7 +14,7 @@
 
 3. Get yourself an interactive node
  ```
- qsub -I -A PLEXOSMODEL -l advres=workshop.57684 
+ qsub -I -A PLEXOSMODEL -l advres=workshop.57684,nodes=1,walltime=1:30:00 -q batch-h
  # without a reservation this looks like qsub -I -A PLEXOSMODEL -q debug
  ```
  
