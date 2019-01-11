@@ -19,7 +19,58 @@ On the HPC system we will work out of the scratch filesystem.  You can put files
 
 We will aquire an interactive session on a compute node to do our work and will request it from the batch scheduler using salloc.
 ```bash
-[$USER@el1 $USER]$ salloc -N 1 -t 30 -A PLEXOSMODEL
+[$USER@el1 $USER]$ salloc -N 1 -t 30 -A naris
+salloc: Granted job allocation 541695
+srun: Step created for job 541695
+[$USER@r1i3n24 $USER]$ squeue -u $USER
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+            541695     short       sh    $USER  R       1:50      1 r1i3n24
+[$USER@r1i3n24 $USER]$ pwd
+/scratch/$USER
+```
+We landed in the scratch file system on the new host, r1i3n24, and can see that we have one job running using squeue.
+
+'modules' is used to manage software that we have available to execute from the command line.  Here, we 
+list our currently loaded software, 
+purge our currently loaded software,
+make available the plexos software, 
+load the plexos software which depends on mono, centos and the xpressmp solvers.
+
+```bash
+[$USER@r1i3n24 $USER]$ module list
+No modules loaded
+[$USER@r1i3n24 $USER]$ module avail plexos
+
+--------------------------------------------------------------------- /nopt/nrel/apps/modules/default/modulefiles ---------------------------------------------------------------------
+   plexos/7.300.4    plexos/7.400.2 (D)
+
+  Where:
+   D:  Default Module
+
+Use "module spider" to find all possible modules.
+Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
+
+
+[$USER@r1i3n24 $USER]$ module load plexos/7.400.2
+pLmod has detected the following error:  Cannot load module "plexos/7.400.2". At least one of these module(s) must be loaded:
+   mono/4.6.2.7
+
+While processing the following module(s):
+    Module fullname  Module Filename
+    ---------------  ---------------
+    plexos/7.400.2   /nopt/nrel/apps/modules/default/modulefiles/plexos/7.400.2
+
+[$USER@r1i3n24 $USER]$ module load mono/4.6.2.7
+[$USER@r1i3n24 $USER]$ module load xpressmp/8.0.4
+[$USER@r1i3n24 $USER]$ module load centos
+[$USER@r1i3n24 $USER]$ module load plexos/7.400.2
+[$USER@r1i3n24 $USER]$ module list
+
+Currently Loaded Modules:
+  1) mono/4.6.2.7   2) xpressmp/8.0.4   3) centos/7.4   4) plexos/7.400.2
+
+ 
+
 ```
 
 ## Initial Session on Peregrine
