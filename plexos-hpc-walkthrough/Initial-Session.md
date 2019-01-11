@@ -1,4 +1,28 @@
-## Initial Session
+## Initial Session on Eagle
+
+A [user basics page](https://www.nrel.gov/hpc/eagle-user-basics.html) is available on the [NREL HPC Website](https://hpc.nrel.gov)
+
+Here we walk through an initial session on the HPC, going to the scratch filesystem, and obtaining an interactive session on a compute node, finding the plexos software.
+
+```bash
+[$USER@laptop ~]$ ssh el1.hpc.nrel.gov
+[$USER@el1 ~]$ pwd
+/home/$USER
+```
+On the HPC system we will work out of the scratch filesystem.  You can put files you want to keep for a long time in the home filesystem, but it is much smaller than the scratch filesystem and we will not want to run large compute and data intensive jobs from that filesystem.  The home filesystem is backed up nightly whereas scratch has untouched data deleted periodically.
+
+```bash
+[$USER@el1 ~]$ cd /scratch/$USER
+[$USER@el1 $USER]$ pwd
+/scratch/$USER
+```
+
+We will aquire an interactive session on a compute node to do our work and will request it from the batch scheduler using salloc.
+```bash
+[$USER@el1 $USER]$ salloc -N 1 -t 30 -A PLEXOSMODEL
+```
+
+## Initial Session on Peregrine
 
 A [getting started guide](https://hpc.nrel.gov/users/systems/peregrine/getting-started-for-users-new-to-high-performance-computing) is available on the [NREL HPC Website](https://hpc.nrel.gov)
 
